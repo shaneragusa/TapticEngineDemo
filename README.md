@@ -11,4 +11,4 @@ Open up the watch app, and you'll be provided with a board of different vibratio
 
 *This app works best with the watch's Silent Mode turned on.  Otherwise, you'll have to wait for the vibration's respective sound to finish before the next vibration in the sequence plays.*
 
-*The iPhone app only displays a white screen.  This project only focuses on the watch app."
+*The iPhone app only displays a white screen.  This project only focuses on the watch app.*
