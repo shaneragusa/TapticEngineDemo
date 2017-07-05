@@ -8,5 +8,7 @@ This project demonstrates the capabilities of the Taptic Engine on the Apple Wat
 Open up the watch app, and you'll be provided with a board of different vibration patterns.  Select what patterns you want to add to the sequence by tapping on their respective buttons.  Use the slider to change the length of time between vibrations.  
 
 *NOTES:*
+
 *This app works best with the watch's Silent Mode turned on.  Otherwise, you'll have to wait for the vibration's respective sound to finish before the next vibration in the sequence plays.*
+
 *The iPhone app only displays a white screen.  This project only focuses on the watch app."
