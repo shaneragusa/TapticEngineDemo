@@ -1,15 +1,111 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TapticEngineDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="35" alignment="left" id="Lfx-Ua-jtB">
+                            <items>
+                                <button width="0.29999999999999999" height="110" alignment="center" title="Long Buzz" id="k2O-FP-sEV">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="failPressed" destination="AgC-eL-Hgc" id="1mW-rD-dgp"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="110" alignment="center" title="Hard Click" id="2og-qQ-8kH">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="startPressed" destination="AgC-eL-Hgc" id="yYX-o5-xNL"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" height="110" alignment="center" title="Soft Click" id="IHf-hz-rMM">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <connections>
+                                        <action selector="clickPressed" destination="AgC-eL-Hgc" id="Vlr-dj-VJf"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" height="40" alignment="left" id="avJ-sz-jU3">
+                            <items>
+                                <button width="0.25" height="96" alignment="center" title="Notif" id="rzf-hb-MWv">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="notifPressed" destination="AgC-eL-Hgc" id="2mp-vv-D9X"/>
+                                    </connections>
+                                </button>
+                                <button width="0.25" height="96" alignment="center" title="Soft x2" id="Tjd-p2-1uu">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="upPressed" destination="AgC-eL-Hgc" id="2Ld-en-fwU"/>
+                                    </connections>
+                                </button>
+                                <button width="0.25" height="96" alignment="center" title="Soft x3" id="vQ6-vE-Ran">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="succPressed" destination="AgC-eL-Hgc" id="z1p-fE-ghD"/>
+                                    </connections>
+                                </button>
+                                <button width="39" height="96" alignment="center" title="Hard x2" id="azz-CD-lTd">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                    <connections>
+                                        <action selector="stopPressed" destination="AgC-eL-Hgc" id="Isz-9t-0fi"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator alignment="left" verticalAlignment="bottom" id="cY5-DY-Ppr"/>
+                        <slider width="1" height="35" alignment="center" verticalAlignment="bottom" maximum="4" steps="4" id="rDG-xK-0bc">
+                            <connections>
+                                <action selector="sliderChange:" destination="AgC-eL-Hgc" id="W4H-Qd-Mqq"/>
+                            </connections>
+                        </slider>
+                        <separator alignment="left" verticalAlignment="bottom" id="WnX-oE-Kf9"/>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="iJW-G8-DbL">
+                            <items>
+                                <button width="0.5" height="32" alignment="center" verticalAlignment="bottom" title="Play" id="h7f-ef-fk3">
+                                    <connections>
+                                        <action selector="playPressed" destination="AgC-eL-Hgc" id="4JY-Rp-LfI"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="32" alignment="center" verticalAlignment="bottom" title="Reset" id="thr-hY-7PM">
+                                    <connections>
+                                        <action selector="reset" destination="AgC-eL-Hgc" id="99b-3R-pwb"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="click" destination="IHf-hz-rMM" id="jCc-zs-t2z"/>
+                        <outlet property="fail" destination="k2O-FP-sEV" id="36J-cr-ohr"/>
+                        <outlet property="notification" destination="rzf-hb-MWv" id="LU9-7L-GQh"/>
+                        <outlet property="play" destination="h7f-ef-fk3" id="Qwh-Wu-qYK"/>
+                        <outlet property="start" destination="2og-qQ-8kH" id="TGH-wJ-KUv"/>
+                        <outlet property="stop" destination="azz-CD-lTd" id="I8z-w9-4TW"/>
+                        <outlet property="success" destination="vQ6-vE-Ran" id="WE7-0z-Ba2"/>
+                        <outlet property="up" destination="Tjd-p2-1uu" id="w0d-LH-esG"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="34" y="30.948717948717952"/>
         </scene>
     </scenes>
 </document>

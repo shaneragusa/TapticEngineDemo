@@ -21,6 +21,9 @@
 		7017B1411EDDBF5B00526245 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7017B1401EDDBF5B00526245 /* InterfaceController.swift */; };
 		7017B1431EDDBF5B00526245 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7017B1421EDDBF5B00526245 /* ExtensionDelegate.swift */; };
 		7017B1451EDDBF5B00526245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7017B1441EDDBF5B00526245 /* Assets.xcassets */; };
+		701EB8E01EDF0B3B00EEFF62 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701EB8DF1EDF0B3B00EEFF62 /* HealthKit.framework */; };
+		701EB8E41EE06B4300EEFF62 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EB8E31EE06B4300EEFF62 /* LinkedList.swift */; };
+		701EB8E51EE0706300EEFF62 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EB8E31EE06B4300EEFF62 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,10 +101,13 @@
 		7017B1341EDDBF5B00526245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7017B1361EDDBF5B00526245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7017B13B1EDDBF5B00526245 /* TapticEngineDemo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TapticEngineDemo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7017B1401EDDBF5B00526245 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7017B1401EDDBF5B00526245 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InterfaceController.swift; path = "/Users/shaneragusa/Desktop/UPIC/TapticEngineDemo/TapticEngineDemo WatchKit Extension/InterfaceController.swift"; sourceTree = "<absolute>"; };
 		7017B1421EDDBF5B00526245 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		7017B1441EDDBF5B00526245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7017B1461EDDBF5C00526245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		701EB8DD1EDF0B3B00EEFF62 /* TapticEngineDemo WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TapticEngineDemo WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		701EB8DF1EDF0B3B00EEFF62 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		701EB8E31EE06B4300EEFF62 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = "../TapticEngineDemo WatchKit App/LinkedList.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701EB8E01EDF0B3B00EEFF62 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 				7017B1301EDDBF5B00526245 /* TapticEngineDemo WatchKit App */,
 				7017B13F1EDDBF5B00526245 /* TapticEngineDemo WatchKit Extension */,
 				7017B1051EDDBF5B00526245 /* Products */,
+				701EB8DE1EDF0B3B00EEFF62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,12 +212,22 @@
 		7017B13F1EDDBF5B00526245 /* TapticEngineDemo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				701EB8DD1EDF0B3B00EEFF62 /* TapticEngineDemo WatchKit Extension.entitlements */,
 				7017B1401EDDBF5B00526245 /* InterfaceController.swift */,
+				701EB8E31EE06B4300EEFF62 /* LinkedList.swift */,
 				7017B1421EDDBF5B00526245 /* ExtensionDelegate.swift */,
 				7017B1441EDDBF5B00526245 /* Assets.xcassets */,
 				7017B1461EDDBF5C00526245 /* Info.plist */,
 			);
 			path = "TapticEngineDemo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		701EB8DE1EDF0B3B00EEFF62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				701EB8DF1EDF0B3B00EEFF62 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,11 +353,21 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 59PPGDL29B;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes.watchos.app = {
+								enabled = 0;
+							};
+						};
 					};
 					7017B13A1EDDBF5B00526245 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 59PPGDL29B;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -414,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701EB8E41EE06B4300EEFF62 /* LinkedList.swift in Sources */,
 				7017B10A1EDDBF5B00526245 /* ViewController.swift in Sources */,
 				7017B1081EDDBF5B00526245 /* AppDelegate.swift in Sources */,
 			);
@@ -439,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701EB8E51EE0706300EEFF62 /* LinkedList.swift in Sources */,
 				7017B1431EDDBF5B00526245 /* ExtensionDelegate.swift in Sources */,
 				7017B1411EDDBF5B00526245 /* InterfaceController.swift in Sources */,
 			);
@@ -594,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "TapticEngineDemo WatchKit Extension/TapticEngineDemo WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = 59PPGDL29B;
 				INFOPLIST_FILE = "TapticEngineDemo WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -611,6 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "TapticEngineDemo WatchKit Extension/TapticEngineDemo WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = 59PPGDL29B;
 				INFOPLIST_FILE = "TapticEngineDemo WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -638,7 +670,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -656,7 +688,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -763,6 +795,7 @@
 				7017B14B1EDDBF5C00526245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7017B14D1EDDBF5C00526245 /* Build configuration list for PBXNativeTarget "TapticEngineDemo WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -771,6 +804,7 @@
 				7017B14F1EDDBF5C00526245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7017B1511EDDBF5C00526245 /* Build configuration list for PBXNativeTarget "TapticEngineDemo" */ = {
 			isa = XCConfigurationList;
@@ -779,6 +813,7 @@
 				7017B1531EDDBF5C00526245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7017B1541EDDBF5C00526245 /* Build configuration list for PBXNativeTarget "TapticEngineDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -787,6 +822,7 @@
 				7017B1561EDDBF5C00526245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7017B1571EDDBF5C00526245 /* Build configuration list for PBXNativeTarget "TapticEngineDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -795,6 +831,7 @@
 				7017B1591EDDBF5C00526245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
